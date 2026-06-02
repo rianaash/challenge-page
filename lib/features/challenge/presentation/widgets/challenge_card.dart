@@ -15,16 +15,19 @@ class ChallengeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        width: 170, // Lebar card disesuaikan dengan desain carousel
-        height: 250, // Tinggi card
-        decoration: BoxDecoration(
-          borderRadius: AppRadius.borderRadiusL, // Sudut tumpul premium
-          image: DecorationImage(
-            image: AssetImage(imageAsset),
-            fit: BoxFit.cover, // Gambar memenuhi seluruh area card
+      child: Hero(
+        // Tag harus unik, kita gunakan path string dari asset gambarnya
+        tag: imageAsset, 
+        child: Container(
+          width: 170,
+          height: 250,
+          decoration: BoxDecoration(
+            borderRadius: AppRadius.borderRadiusL,
+            image: DecorationImage(
+              image: AssetImage(imageAsset),
+              fit: BoxFit.cover,
+            ),
           ),
-          // Opsional: Berikan sedikit shadow untuk efek elevasi jika diperlukan
         ),
       ),
     );

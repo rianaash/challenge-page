@@ -1,6 +1,5 @@
+import 'package:challenge_app/features/challenge/presentation/pages/main_page.dart';
 import 'package:flutter/material.dart';
-import 'package:challenge_app/features/challenge/presentation/pages/find_page.dart';
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MainApp());
@@ -20,7 +19,7 @@ class MainApp extends StatelessWidget {
         // Kita set scaffoldBackgroundColor transparan agar gradient dari Container terlihat sempurna
         scaffoldBackgroundColor: Colors.transparent,
       ),
-      home: const FindPage(),
+      home: const MainPage(),
     );
   }
 }
